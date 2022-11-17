@@ -3,27 +3,53 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89C2ACF52924DEE8009CA2DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89C2ACF42924DEE8009CA2DF /* GoogleService-Info.plist */; };
+		89C2ACF72924E457009CA2DF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C2ACF62924E457009CA2DF /* LoginViewModel.swift */; };
+		89C2ACF92924E50C009CA2DF /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C2ACF82924E50C009CA2DF /* AuthenticationManager.swift */; };
+		89C2ACFB2924E641009CA2DF /* RegisterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C2ACFA2924E641009CA2DF /* RegisterManager.swift */; };
+		89C2ACFE2924E6B8009CA2DF /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C2ACFD2924E6B8009CA2DF /* RegisterViewModel.swift */; };
+		89C2AD002924F05D009CA2DF /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C2ACFF2924F05D009CA2DF /* UserModel.swift */; };
+		89D123F329261F2A004F429A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D123F229261F2A004F429A /* HomeViewController.swift */; };
+		89D123F629261F4B004F429A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D123F529261F4B004F429A /* HomeViewModel.swift */; };
+		89D123F8292629B4004F429A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D123F7292629B4004F429A /* SettingsViewController.swift */; };
+		89D123FB292629D6004F429A /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D123FA292629D6004F429A /* SettingsViewModel.swift */; };
 		89F368652924CBB0005EDCE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F368642924CBB0005EDCE0 /* AppDelegate.swift */; };
 		89F368672924CBB0005EDCE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F368662924CBB0005EDCE0 /* SceneDelegate.swift */; };
-		89F368692924CBB0005EDCE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F368682924CBB0005EDCE0 /* ViewController.swift */; };
+		89F368692924CBB0005EDCE0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F368682924CBB0005EDCE0 /* LoginViewController.swift */; };
 		89F3686C2924CBB0005EDCE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89F3686A2924CBB0005EDCE0 /* Main.storyboard */; };
 		89F3686E2924CBB1005EDCE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89F3686D2924CBB1005EDCE0 /* Assets.xcassets */; };
 		89F368712924CBB1005EDCE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89F3686F2924CBB1005EDCE0 /* LaunchScreen.storyboard */; };
+		89F3687D2924D75C005EDCE0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F3687C2924D75C005EDCE0 /* RegisterViewController.swift */; };
+		EA9A97E20C1184B9F315883E /* Pods_CasinoRouletteApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B7F982858C9509A7BE39197 /* Pods_CasinoRouletteApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B7F982858C9509A7BE39197 /* Pods_CasinoRouletteApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CasinoRouletteApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57EBE183E650F328203B97A4 /* Pods-CasinoRouletteApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CasinoRouletteApp.debug.xcconfig"; path = "Target Support Files/Pods-CasinoRouletteApp/Pods-CasinoRouletteApp.debug.xcconfig"; sourceTree = "<group>"; };
+		89C2ACF42924DEE8009CA2DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		89C2ACF62924E457009CA2DF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		89C2ACF82924E50C009CA2DF /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		89C2ACFA2924E641009CA2DF /* RegisterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterManager.swift; sourceTree = "<group>"; };
+		89C2ACFD2924E6B8009CA2DF /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		89C2ACFF2924F05D009CA2DF /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		89D123F229261F2A004F429A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		89D123F529261F4B004F429A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		89D123F7292629B4004F429A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		89D123FA292629D6004F429A /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		89F368612924CBB0005EDCE0 /* CasinoRouletteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CasinoRouletteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89F368642924CBB0005EDCE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89F368662924CBB0005EDCE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		89F368682924CBB0005EDCE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		89F368682924CBB0005EDCE0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		89F3686B2924CBB0005EDCE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89F3686D2924CBB1005EDCE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89F368702924CBB1005EDCE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89F368722924CBB1005EDCE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89F3687C2924D75C005EDCE0 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		AA75ED2BDD4ED8517C602244 /* Pods-CasinoRouletteApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CasinoRouletteApp.release.xcconfig"; path = "Target Support Files/Pods-CasinoRouletteApp/Pods-CasinoRouletteApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +57,63 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA9A97E20C1184B9F315883E /* Pods_CasinoRouletteApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61B97E8C7433DC4AE100AC69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B7F982858C9509A7BE39197 /* Pods_CasinoRouletteApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89C2ACFC2924E6AD009CA2DF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				89C2ACF82924E50C009CA2DF /* AuthenticationManager.swift */,
+				89C2ACFA2924E641009CA2DF /* RegisterManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		89C2AD012924F0FB009CA2DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				89C2ACFF2924F05D009CA2DF /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		89D123F429261F38004F429A /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				89D123F229261F2A004F429A /* HomeViewController.swift */,
+				89D123F529261F4B004F429A /* HomeViewModel.swift */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		89D123F9292629C5004F429A /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				89D123F7292629B4004F429A /* SettingsViewController.swift */,
+				89D123FA292629D6004F429A /* SettingsViewModel.swift */,
+			);
+			path = SettingsViewController;
+			sourceTree = "<group>";
+		};
 		89F368582924CBB0005EDCE0 = {
 			isa = PBXGroup;
 			children = (
 				89F368632924CBB0005EDCE0 /* CasinoRouletteApp */,
 				89F368622924CBB0005EDCE0 /* Products */,
+				EA0E782E6879C2ABD77D780F /* Pods */,
+				61B97E8C7433DC4AE100AC69 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +128,72 @@
 		89F368632924CBB0005EDCE0 /* CasinoRouletteApp */ = {
 			isa = PBXGroup;
 			children = (
-				89F368642924CBB0005EDCE0 /* AppDelegate.swift */,
-				89F368662924CBB0005EDCE0 /* SceneDelegate.swift */,
-				89F368682924CBB0005EDCE0 /* ViewController.swift */,
-				89F3686A2924CBB0005EDCE0 /* Main.storyboard */,
-				89F3686D2924CBB1005EDCE0 /* Assets.xcassets */,
-				89F3686F2924CBB1005EDCE0 /* LaunchScreen.storyboard */,
-				89F368722924CBB1005EDCE0 /* Info.plist */,
+				89F368782924CC7C005EDCE0 /* Application */,
+				89F3687B2924CCAB005EDCE0 /* LoginViewController */,
+				89F3687E2924D75F005EDCE0 /* RegisterViewController */,
+				89D123F429261F38004F429A /* HomeViewController */,
+				89C2AD012924F0FB009CA2DF /* Models */,
+				89C2ACFC2924E6AD009CA2DF /* Services */,
+				89F368792924CC9A005EDCE0 /* Storyboards */,
+				89F3687A2924CCA1005EDCE0 /* Resources */,
+				89D123F9292629C5004F429A /* SettingsViewController */,
 			);
 			path = CasinoRouletteApp;
+			sourceTree = "<group>";
+		};
+		89F368782924CC7C005EDCE0 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				89F368642924CBB0005EDCE0 /* AppDelegate.swift */,
+				89F368662924CBB0005EDCE0 /* SceneDelegate.swift */,
+				89F368722924CBB1005EDCE0 /* Info.plist */,
+				89C2ACF42924DEE8009CA2DF /* GoogleService-Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		89F368792924CC9A005EDCE0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				89F3686A2924CBB0005EDCE0 /* Main.storyboard */,
+				89F3686F2924CBB1005EDCE0 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		89F3687A2924CCA1005EDCE0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				89F3686D2924CBB1005EDCE0 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		89F3687B2924CCAB005EDCE0 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				89F368682924CBB0005EDCE0 /* LoginViewController.swift */,
+				89C2ACF62924E457009CA2DF /* LoginViewModel.swift */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		89F3687E2924D75F005EDCE0 /* RegisterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				89F3687C2924D75C005EDCE0 /* RegisterViewController.swift */,
+				89C2ACFD2924E6B8009CA2DF /* RegisterViewModel.swift */,
+			);
+			path = RegisterViewController;
+			sourceTree = "<group>";
+		};
+		EA0E782E6879C2ABD77D780F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57EBE183E650F328203B97A4 /* Pods-CasinoRouletteApp.debug.xcconfig */,
+				AA75ED2BDD4ED8517C602244 /* Pods-CasinoRouletteApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89F368752924CBB1005EDCE0 /* Build configuration list for PBXNativeTarget "CasinoRouletteApp" */;
 			buildPhases = (
+				CFA068C44D9725D48221B060 /* [CP] Check Pods Manifest.lock */,
 				89F3685D2924CBB0005EDCE0 /* Sources */,
 				89F3685E2924CBB0005EDCE0 /* Frameworks */,
 				89F3685F2924CBB0005EDCE0 /* Resources */,
+				214812D3826E52769F4146B3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -103,7 +234,7 @@
 				};
 			};
 			buildConfigurationList = 89F3685C2924CBB0005EDCE0 /* Build configuration list for PBXProject "CasinoRouletteApp" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -126,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89F368712924CBB1005EDCE0 /* LaunchScreen.storyboard in Resources */,
+				89C2ACF52924DEE8009CA2DF /* GoogleService-Info.plist in Resources */,
 				89F3686E2924CBB1005EDCE0 /* Assets.xcassets in Resources */,
 				89F3686C2924CBB0005EDCE0 /* Main.storyboard in Resources */,
 			);
@@ -133,14 +265,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		214812D3826E52769F4146B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CasinoRouletteApp/Pods-CasinoRouletteApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CasinoRouletteApp/Pods-CasinoRouletteApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CasinoRouletteApp/Pods-CasinoRouletteApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFA068C44D9725D48221B060 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CasinoRouletteApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		89F3685D2924CBB0005EDCE0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89F368692924CBB0005EDCE0 /* ViewController.swift in Sources */,
+				89F368692924CBB0005EDCE0 /* LoginViewController.swift in Sources */,
+				89D123F629261F4B004F429A /* HomeViewModel.swift in Sources */,
 				89F368652924CBB0005EDCE0 /* AppDelegate.swift in Sources */,
 				89F368672924CBB0005EDCE0 /* SceneDelegate.swift in Sources */,
+				89C2ACFE2924E6B8009CA2DF /* RegisterViewModel.swift in Sources */,
+				89C2ACFB2924E641009CA2DF /* RegisterManager.swift in Sources */,
+				89D123F329261F2A004F429A /* HomeViewController.swift in Sources */,
+				89C2ACF72924E457009CA2DF /* LoginViewModel.swift in Sources */,
+				89D123FB292629D6004F429A /* SettingsViewModel.swift in Sources */,
+				89F3687D2924D75C005EDCE0 /* RegisterViewController.swift in Sources */,
+				89C2AD002924F05D009CA2DF /* UserModel.swift in Sources */,
+				89C2ACF92924E50C009CA2DF /* AuthenticationManager.swift in Sources */,
+				89D123F8292629B4004F429A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +466,7 @@
 		};
 		89F368762924CBB1005EDCE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57EBE183E650F328203B97A4 /* Pods-CasinoRouletteApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -289,7 +474,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V2AAW35578;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CasinoRouletteApp/Info.plist;
+				INFOPLIST_FILE = CasinoRouletteApp/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -310,6 +495,7 @@
 		};
 		89F368772924CBB1005EDCE0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA75ED2BDD4ED8517C602244 /* Pods-CasinoRouletteApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -317,7 +503,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V2AAW35578;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CasinoRouletteApp/Info.plist;
+				INFOPLIST_FILE = CasinoRouletteApp/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
