@@ -8,13 +8,13 @@
 import Foundation
 
 protocol LoginViewModelProtocol {
-    func signInUser(with login: String, and password: String)
+    func signInUser(with login: String, and password: String, completion: @escaping() -> Void)
     func signInWithGoogle(presentingVC: LoginViewController, completion: @escaping() -> Void)
 }
 
 class LoginViewModel: LoginViewModelProtocol {
-    func signInUser(with login: String, and password: String) {
-        AuthenticationManager.shared.signInUser(with: login, and: password)
+    func signInUser(with login: String, and password: String, completion: @escaping() -> Void) {
+        AuthenticationManager.shared.signInUser(with: login, and: password, completion: completion)
     }
     
     func signInWithGoogle(presentingVC: LoginViewController, completion: @escaping() -> Void) {

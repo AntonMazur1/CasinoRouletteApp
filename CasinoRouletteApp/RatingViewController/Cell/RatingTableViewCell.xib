@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="67" id="KGk-i7-Jjw" customClass="RatingTableViewCell" customModule="CasinoRouletteApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J1D-C7-0jq">
+                        <rect key="frame" x="16" y="10" width="52" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="J1D-C7-0jq" secondAttribute="height" multiplier="1:1" id="VyH-rc-6DB"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZD-qz-xqh">
+                        <rect key="frame" x="259.66666666666669" y="23.333333333333336" width="44.333333333333314" height="20.333333333333336"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="mGW-kq-fcJ">
+                        <rect key="frame" x="76" y="10" width="80.333333333333314" height="47"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vby-Uq-ppF">
+                                <rect key="frame" x="0.0" y="0.0" width="80.333333333333329" height="22.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winrate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnX-Ho-Rp7">
+                                <rect key="frame" x="0.0" y="24.333333333333336" width="80.333333333333329" height="22.666666666666664"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" red="0.62745100259999997" green="0.75294119120000003" blue="0.77254903320000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <constraints>
+                    <constraint firstItem="mGW-kq-fcJ" firstAttribute="leading" secondItem="J1D-C7-0jq" secondAttribute="trailing" constant="8" symbolic="YES" id="1s2-cP-tC6"/>
+                    <constraint firstItem="J1D-C7-0jq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="8dY-Dv-bTw"/>
+                    <constraint firstItem="J1D-C7-0jq" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.1625" id="Kh0-QJ-Cv2"/>
+                    <constraint firstAttribute="trailing" secondItem="aZD-qz-xqh" secondAttribute="trailing" constant="16" id="ihZ-Hv-I2n"/>
+                    <constraint firstItem="mGW-kq-fcJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="luP-mY-hB2"/>
+                    <constraint firstItem="J1D-C7-0jq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="pGE-Tg-ShS"/>
+                    <constraint firstItem="aZD-qz-xqh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wJ4-kp-CUJ"/>
+                    <constraint firstAttribute="bottom" secondItem="mGW-kq-fcJ" secondAttribute="bottom" constant="10" id="xQR-w8-42T"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="coinsLabel" destination="aZD-qz-xqh" id="TdY-lw-SEm"/>
+                <outlet property="logoImage" destination="J1D-C7-0jq" id="Dpj-32-eZS"/>
+                <outlet property="userNameLabel" destination="Vby-Uq-ppF" id="eTI-Q9-o5X"/>
+                <outlet property="winRateLabel" destination="cnX-Ho-Rp7" id="Zws-XK-fb7"/>
+            </connections>
+            <point key="canvasLocation" x="116.92307692307692" y="28.791469194312796"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -28,7 +28,9 @@ class LoginViewController: UIViewController {
               let password = passwordTextField.text, !password.isEmpty
         else { return }
         
-        viewModel.signInUser(with: login, and: password)
+        viewModel.signInUser(with: login, and: password) {
+            self.dismiss(animated: true)
+        }
     }
     
     @IBAction func googleLoginButtonPressed() {

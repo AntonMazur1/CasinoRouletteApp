@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -122,26 +123,90 @@
                     <view key="view" contentMode="scaleToFill" id="Yv9-Vv-aWm">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="is0-nW-zdk">
+                                <rect key="frame" x="16" y="287.66666666666669" width="358" height="269.00000000000006"/>
+                                <color key="backgroundColor" red="0.15561183049999999" green="0.87332828200000001" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hWP-il-JRE">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3O2-Je-OSl">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kMU-TO-fLf">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="eeE-JX-oVy" id="VSh-Qf-nsb"/>
+                                    <outlet property="delegate" destination="eeE-JX-oVy" id="DHB-8a-R5F"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Wy6-L8-tXS"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.15561183050792901" green="0.87332828204508117" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="is0-nW-zdk" firstAttribute="width" secondItem="Yv9-Vv-aWm" secondAttribute="width" multiplier="0.917949" id="XAz-uY-Hhz"/>
+                            <constraint firstItem="is0-nW-zdk" firstAttribute="centerY" secondItem="Yv9-Vv-aWm" secondAttribute="centerY" id="YVK-nu-HDh"/>
+                            <constraint firstItem="is0-nW-zdk" firstAttribute="centerX" secondItem="Yv9-Vv-aWm" secondAttribute="centerX" id="wn2-Ub-6ZQ"/>
+                            <constraint firstItem="is0-nW-zdk" firstAttribute="height" secondItem="Yv9-Vv-aWm" secondAttribute="height" multiplier="0.31872" id="wtW-vW-t34"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SY2-Kt-BKd"/>
+                    <connections>
+                        <outlet property="rouletteCollectionView" destination="is0-nW-zdk" id="3MB-Q3-d4y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D8m-Wr-ced" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3465" y="-654"/>
+            <point key="canvasLocation" x="3464.6153846153843" y="-654.02843601895734"/>
         </scene>
-        <!--View Controller-->
+        <!--Rating View Controller-->
         <scene sceneID="Adc-n5-QAz">
             <objects>
-                <viewController id="cAb-QK-ubo" sceneMemberID="viewController">
+                <viewController id="cAb-QK-ubo" customClass="RatingViewController" customModule="CasinoRouletteApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5qh-FW-rdv">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mXq-Ml-IGo">
+                                <rect key="frame" x="0.0" y="47" width="390" height="714"/>
+                                <color key="backgroundColor" red="0.62745100259999997" green="0.75294119120000003" blue="0.77254903320000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="raw-AT-uh6">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="raw-AT-uh6" id="Jhy-c0-t5D">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="cAb-QK-ubo" id="5KN-pK-3gt"/>
+                                    <outlet property="delegate" destination="cAb-QK-ubo" id="pdb-aV-B5I"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="PKd-3F-myI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.62745100259999997" green="0.75294119120000003" blue="0.77254903320000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="PKd-3F-myI" firstAttribute="trailing" secondItem="mXq-Ml-IGo" secondAttribute="trailing" id="4BP-ms-wjn"/>
+                            <constraint firstItem="PKd-3F-myI" firstAttribute="bottom" secondItem="mXq-Ml-IGo" secondAttribute="bottom" id="4Oa-RY-B7x"/>
+                            <constraint firstItem="mXq-Ml-IGo" firstAttribute="leading" secondItem="PKd-3F-myI" secondAttribute="leading" id="8pg-IL-Xp8"/>
+                            <constraint firstItem="mXq-Ml-IGo" firstAttribute="top" secondItem="PKd-3F-myI" secondAttribute="top" id="Hk5-8w-Ede"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="person.fill.questionmark.rtl" catalog="system" id="B8Q-R4-cQl"/>
+                    <connections>
+                        <outlet property="ratingTableView" destination="mXq-Ml-IGo" id="9DO-Ce-JFP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bpo-nQ-FG4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -216,6 +281,9 @@
                                             </attributedString>
                                             <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="deleteUserAccount" destination="yMf-7N-ewE" eventType="touchUpInside" id="mrt-6s-slH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -223,14 +291,14 @@
                                 <rect key="frame" x="30" y="77" width="330" height="20.333333333333329"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pvc-7H-aNy">
-                                        <rect key="frame" x="0.0" y="0.0" width="118" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="119.33333333333333" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="coins" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxe-Mo-eyF">
-                                        <rect key="frame" x="218" y="0.0" width="112" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="219.33333333333334" y="0.0" width="110.66666666666666" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -249,6 +317,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="gear" catalog="system" id="Bkz-5U-kPs"/>
+                    <connections>
+                        <outlet property="coinsLabel" destination="hxe-Mo-eyF" id="gQO-pJ-yKp"/>
+                        <outlet property="userNameLabel" destination="Pvc-7H-aNy" id="lGv-Cd-bjb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dL-Fh-gck" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="BSZ-a7-VEk" userLabel="Exit" sceneMemberID="exit"/>
@@ -358,6 +430,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="A1F-IN-87G" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bsj-Wh-azd">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -379,9 +452,6 @@
         <image name="key.fill" catalog="system" width="82" height="128"/>
         <image name="mail.fill" catalog="system" width="128" height="93"/>
         <image name="person.fill.questionmark.rtl" catalog="system" width="128" height="102"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

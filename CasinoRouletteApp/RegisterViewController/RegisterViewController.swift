@@ -8,9 +8,8 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
-
-    @IBOutlet var loginTextField: UITextField!
-    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet weak var loginTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     private var viewModel: RegisterViewModelProtocol!
     
@@ -25,7 +24,9 @@ class RegisterViewController: UIViewController {
               let password = passwordTextField.text, !password.isEmpty
         else { return }
         
-        viewModel.signUpUser(with: login, and: password)
+        viewModel.signUpUser(with: login, and: password) {
+            self.dismiss(animated: true)
+        }
     }
     
     private func setupTextFields(_ textFields: UITextField...) {

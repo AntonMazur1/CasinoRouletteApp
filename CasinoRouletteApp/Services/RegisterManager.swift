@@ -12,11 +12,10 @@ class RegisterManager {
     
     private init() {}
     
-    func signUpUser(with login: String, and password: String) {
+    func signUpUser(with login: String, and password: String, completion: @escaping() -> Void) {
         Auth.auth().createUser(withEmail: login, password: password) { result, error in
             guard error == nil else { return }
-            
-            print("created")
+            completion()
         }
     }
 }
