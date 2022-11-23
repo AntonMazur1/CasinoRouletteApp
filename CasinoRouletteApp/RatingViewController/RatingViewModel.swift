@@ -29,6 +29,7 @@ class RatingViewModel: RatingViewModelProtocol {
     
     func getRatingViewModel(at indexPath: IndexPath) -> RatingTableViewCellViewModelProtocol? {
         let user = users[indexPath.row]
+        
         return RatingTableViewCellViewModel(
             userName: user.username ?? "",
             winRate: user.winRate ?? 0,

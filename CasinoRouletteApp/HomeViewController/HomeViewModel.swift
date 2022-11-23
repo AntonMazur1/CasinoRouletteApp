@@ -8,16 +8,21 @@
 import Foundation
 
 protocol HomeViewModelProtocol {
+    var maximumBetValue: Double? { get }
     var numberOfItems: Int { get }
     func checkForLogin(completion: @escaping(LoginViewController) -> Void)
-    func makeBet(with indexPath: IndexPath)
-    func deleteBet(with indexPath: IndexPath)
+    func checkForWin(with number: Int, and betSum: Int)
+    func getUser(completion: @escaping() -> ())
+    func makeBet(with indexPath: IndexPath, and betSum: Int)
+    func deleteBet(with indexPath: IndexPath, and betSum: Int)
     func getRouletteCollectionViewCellViewModel(at indexPath: IndexPath) -> RouletteCollectionViewCellViewModelProtocol?
 }
 
 class HomeViewModel: HomeViewModelProtocol {
     private var numbers: [String] = Array(0...31).map { String($0) }
-    private var bets: [Int] = []
+    private var bets: [Int: Int] = [:]
+    
+    var maximumBetValue: Double?
     
     var numberOfItems: Int {
         numbers.count
@@ -29,14 +34,29 @@ class HomeViewModel: HomeViewModelProtocol {
         }
     }
     
-    func makeBet(with indexPath: IndexPath) {
-        guard let number = Int(numbers[indexPath.row]) else { return }
-        bets.append(number)
+    func checkForWin(with number: Int, and betSum: Int) {
+        if let winBet = bets[number] {
+            AuthenticationManager.shared.updateCoinsBasedOnGameResult(with: winBet, isWin: true)
+        } else {
+            AuthenticationManager.shared.updateCoinsBasedOnGameResult(with: betSum, isWin: false)
+        }
     }
     
-    func deleteBet(with indexPath: IndexPath) {
-        let number = Int(numbers[indexPath.row])
-        bets.removeAll(where: { $0 == number })
+    func getUser(completion: @escaping() -> ()) {
+        AuthenticationManager.shared.getUserData { userModel in
+            self.maximumBetValue = Double(userModel.first?.coins ?? 0)
+            completion()
+        }
+    }
+    
+    func makeBet(with indexPath: IndexPath, and betSum: Int) {
+        guard let number = Int(numbers[indexPath.row]) else { return }
+        bets[number] = betSum
+    }
+    
+    func deleteBet(with indexPath: IndexPath, and betSum: Int) {
+        guard let number = Int(numbers[indexPath.row]) else { return }
+        bets.removeValue(forKey: number)
     }
     
     func getRouletteCollectionViewCellViewModel(at indexPath: IndexPath) -> RouletteCollectionViewCellViewModelProtocol? {

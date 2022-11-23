@@ -148,10 +148,60 @@
                                     <outlet property="delegate" destination="eeE-JX-oVy" id="DHB-8a-R5F"/>
                                 </connections>
                             </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="ws9-xT-HH9">
+                                <rect key="frame" x="86.666666666666686" y="106" width="217" height="78.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winning number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paX-ms-RKr">
+                                        <rect key="frame" x="44.333333333333329" y="0.0" width="128.33333333333337" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the number on board" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Txr-Op-lvK">
+                                        <rect key="frame" x="0.0" y="58.33333333333335" width="217" height="20.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="GQj-f0-gWb">
+                                <rect key="frame" x="136.66666666666666" y="668.66666666666663" width="117" height="75.333333333333371"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9ia-Ed-3nZ">
+                                        <rect key="frame" x="11" y="0.0" width="94.666666666666671" height="20.333333333333332"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your bet:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tR-m1-Y9l">
+                                                <rect key="frame" x="0.0" y="0.0" width="68.666666666666671" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wU1-IQ-WFo">
+                                                <rect key="frame" x="76.666666666666686" y="0.0" width="18" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minimumValue="10" maximumValue="100000" stepValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="PKH-1C-8hY">
+                                        <rect key="frame" x="11.333333333333343" y="43.333333333333371" width="94" height="32"/>
+                                        <connections>
+                                            <action selector="changeBetStepper:" destination="eeE-JX-oVy" eventType="valueChanged" id="jBB-9p-9N9"/>
+                                        </connections>
+                                    </stepper>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Wy6-L8-tXS"/>
                         <color key="backgroundColor" red="0.15561183050792901" green="0.87332828204508117" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="GQj-f0-gWb" firstAttribute="centerX" secondItem="Yv9-Vv-aWm" secondAttribute="centerX" id="39e-Di-CaB"/>
+                            <constraint firstItem="ws9-xT-HH9" firstAttribute="centerX" secondItem="Yv9-Vv-aWm" secondAttribute="centerX" id="Hah-CQ-OnE"/>
+                            <constraint firstItem="ws9-xT-HH9" firstAttribute="top" secondItem="Wy6-L8-tXS" secondAttribute="top" constant="15" id="NLV-uP-peW"/>
+                            <constraint firstItem="GQj-f0-gWb" firstAttribute="width" secondItem="Yv9-Vv-aWm" secondAttribute="width" multiplier="0.3" id="Pli-yg-MP9"/>
+                            <constraint firstAttribute="bottom" secondItem="GQj-f0-gWb" secondAttribute="bottom" constant="100" id="R78-Wf-USL"/>
                             <constraint firstItem="is0-nW-zdk" firstAttribute="width" secondItem="Yv9-Vv-aWm" secondAttribute="width" multiplier="0.917949" id="XAz-uY-Hhz"/>
                             <constraint firstItem="is0-nW-zdk" firstAttribute="centerY" secondItem="Yv9-Vv-aWm" secondAttribute="centerY" id="YVK-nu-HDh"/>
                             <constraint firstItem="is0-nW-zdk" firstAttribute="centerX" secondItem="Yv9-Vv-aWm" secondAttribute="centerX" id="wn2-Ub-6ZQ"/>
@@ -160,6 +210,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="SY2-Kt-BKd"/>
                     <connections>
+                        <outlet property="betLabel" destination="wU1-IQ-WFo" id="0CX-az-VsM"/>
+                        <outlet property="changeBetStepper" destination="PKH-1C-8hY" id="Kbl-b4-AH7"/>
+                        <outlet property="rolledNumberLabel" destination="Txr-Op-lvK" id="adc-dS-dMT"/>
                         <outlet property="rouletteCollectionView" destination="is0-nW-zdk" id="3MB-Q3-d4y"/>
                     </connections>
                 </viewController>

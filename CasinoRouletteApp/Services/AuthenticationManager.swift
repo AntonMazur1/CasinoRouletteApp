@@ -10,8 +10,6 @@ import FirebaseCore
 import FirebaseDatabase
 import GoogleSignIn
 
-#warning("Убрать принты")
-
 class AuthenticationManager {
     static let shared = AuthenticationManager()
     
@@ -64,7 +62,6 @@ class AuthenticationManager {
         
         Database.database().reference().child("Users").updateChildValues(values) { error, _ in
             guard error == nil else { return }
-            print("saved")
             completion?()
         }
     }
@@ -94,11 +91,24 @@ class AuthenticationManager {
     
     func deleteUserAccount(completion: @escaping() -> Void) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
-        Database.database().reference().child("Users").child(uid).removeValue { [weak self] error, _ in
+        Database.database().reference().child("Users").child(uid).removeValue { error, _ in
             guard error == nil else { return }
             try? Auth.auth().signOut()
             GIDSignIn.sharedInstance.signOut()
             completion()
+        }
+    }
+    
+    func updateCoinsBasedOnGameResult(with coins: Int, isWin: Bool = false) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        getUserData { userModel in
+            guard let amountOfCoins = userModel.first?.coins else { return }
+            guard isWin else {
+                Database.database().reference().child("Users").child(uid).updateChildValues(["coins": amountOfCoins - coins])
+                return
+            }
+            
+            Database.database().reference().child("Users").child(uid).updateChildValues(["coins": amountOfCoins + coins])
         }
     }
 }
