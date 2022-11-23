@@ -55,6 +55,14 @@ class AuthenticationManager {
         }
     }
     
+    func checkForLogin(completion: @escaping (LoginViewController) -> Void) {
+        guard Auth.auth().currentUser == nil else { return }
+        DispatchQueue.main.async {
+            let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+            completion(loginVC)
+        }
+    }
+    
     func saveInDataBase(userData: [String : Any], completion: (() -> Void)? = nil) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
@@ -63,14 +71,6 @@ class AuthenticationManager {
         Database.database().reference().child("Users").updateChildValues(values) { error, _ in
             guard error == nil else { return }
             completion?()
-        }
-    }
-    
-    func checkForLogin(completion: @escaping (LoginViewController) -> Void) {
-        guard Auth.auth().currentUser == nil else { return }
-        DispatchQueue.main.async {
-            let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
-            completion(loginVC)
         }
     }
     
@@ -89,16 +89,6 @@ class AuthenticationManager {
         }
     }
     
-    func deleteUserAccount(completion: @escaping() -> Void) {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        Database.database().reference().child("Users").child(uid).removeValue { error, _ in
-            guard error == nil else { return }
-            try? Auth.auth().signOut()
-            GIDSignIn.sharedInstance.signOut()
-            completion()
-        }
-    }
-    
     func updateCoinsBasedOnGameResult(with coins: Int, isWin: Bool = false) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         getUserData { userModel in
@@ -109,6 +99,16 @@ class AuthenticationManager {
             }
             
             Database.database().reference().child("Users").child(uid).updateChildValues(["coins": amountOfCoins + coins])
+        }
+    }
+    
+    func deleteUserAccount(completion: @escaping() -> Void) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        Database.database().reference().child("Users").child(uid).removeValue { error, _ in
+            guard error == nil else { return }
+            try? Auth.auth().signOut()
+            GIDSignIn.sharedInstance.signOut()
+            completion()
         }
     }
 }
